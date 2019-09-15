@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using WatsonAssistantInterface.Properties;
 
 namespace WatsonAssistantInterface
 {
@@ -16,18 +17,18 @@ namespace WatsonAssistantInterface
 
         static void Main(string[] args)
         {
-            string version = "2019-02-28";
-            string url = "https://gateway-fra.watsonplatform.net/assistant/api";
-            string apikey = "0Q5wiiRDtH981JhPBToyqxlrpnrD6XmHirWBXutaBZNC";
-            string assistantId = "d1cc83a7-8407-4d7e-9bd2-031e76e6eb84";
+            string version = Settings.Default.ApiVersion;
+            string url = Settings.Default.ApiUrl;
+            string apikey = Settings.Default.ApiKey;
+            string assistantId = Settings.Default.AssistantId;
 
-            IamConfig config = new IamConfig(apikey: $"{apikey}");
-            AssistantService service = new AssistantService($"{version}", config);
-            service.SetEndpoint($"{url}");
+            IamConfig config = new IamConfig(apikey);
+            AssistantService service = new AssistantService(version, config);
+            service.SetEndpoint(url);
 
             try
             {
-                var result = service.CreateSession(assistantId: $"{assistantId}");
+                var result = service.CreateSession(assistantId);
                 Log(result.Response);
                 var sessionId = result.Result.SessionId;
                 string text = "Hello";
@@ -67,7 +68,7 @@ namespace WatsonAssistantInterface
                         if (generic.Typing.HasValue && generic.Typing.Value)
                         {
                             Print("...");
-                            Thread.Sleep(300);
+                            Thread.Sleep(500);
                         }
                     }
 

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WatsonAssistantInterface.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ApiVersion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2019-02-28</Value>
+    </Setting>
+    <Setting Name="ApiUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://gateway-fra.watsonplatform.net/assistant/api</Value>
+    </Setting>
+    <Setting Name="ApiKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0Q5wiiRDtH981JhPBToyqxlrpnrD6XmHirWBXutaBZNC</Value>
+    </Setting>
+    <Setting Name="AssistantId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">d1cc83a7-8407-4d7e-9bd2-031e76e6eb84</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
