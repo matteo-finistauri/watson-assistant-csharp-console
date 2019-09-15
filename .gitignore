@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs/WatsonAssistantInterface/v16/Server/sqlite3
+/.vs/WatsonAssistantInterface/v16/.suo
+/bin/Debug
+/obj/Debug
+/packages/IBM.Cloud.SDK.Core.0.8.0
+/packages
