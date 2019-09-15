@@ -58,5 +58,32 @@ namespace WatsonAssistantInterface.Properties {
                 return ((string)(this["AssistantId"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool VerboseLogging {
+            get {
+                return ((bool)(this["VerboseLogging"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Exit")]
+        public string ExitKeyword {
+            get {
+                return ((string)(this["ExitKeyword"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public int TypingTime {
+            get {
+                return ((int)(this["TypingTime"]));
+            }
+        }
     }
 }

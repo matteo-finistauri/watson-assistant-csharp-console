@@ -14,5 +14,14 @@
     <Setting Name="AssistantId" Type="System.String" Scope="Application">
       <Value Profile="(Default)">d1cc83a7-8407-4d7e-9bd2-031e76e6eb84</Value>
     </Setting>
+    <Setting Name="VerboseLogging" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ExitKeyword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Exit</Value>
+    </Setting>
+    <Setting Name="TypingTime" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
