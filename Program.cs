@@ -13,6 +13,10 @@ namespace WatsonAssistantInterface
 {
     class Program
     {
+        private const string BOT_NAME = "Bot";
+
+        private const string USER_NAME = "User";
+
         static void Main(string[] args)
         {
             IamConfig config = new IamConfig(Settings.Default.ApiKey);
@@ -83,10 +87,11 @@ namespace WatsonAssistantInterface
                     }
 
                     lastType = response.Output.Generic.LastOrDefault()?.ResponseType ?? string.Empty;
-                    Console.Write("User: ");
+                    Console.Write($"{USER_NAME}: ");
                     text = Console.ReadLine();
                     if (lastType == "option")
                     {
+                        // Managing choice selection through its index.
                         if (int.TryParse(text, out int value) && options.ContainsKey(value))
                         {
                             text = options[value];
@@ -117,7 +122,7 @@ namespace WatsonAssistantInterface
 
         private static void Print(string value)
         {
-            Console.WriteLine("Bot: " + value);
+            Console.WriteLine($"{BOT_NAME}: " + value);
         }
 
         private static void DoService(string value)
